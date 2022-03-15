@@ -1,0 +1,13 @@
+[package]
+name = "zkrakend"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/Huskehhh/zkrakend"
+description = "A cross-platform driver for the Kraken Z series AIO coolers written in Rust."
+license = "MIT"
+
+[dependencies]
+hidapi-rusb = "1.3.0"
+rusb = "0.9"
+color-eyre = "0.6"
+zkraken-lib = "0.2.0-alpha"

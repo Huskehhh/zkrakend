@@ -11,19 +11,11 @@ fn main() -> Result<()> {
     let hid_device = api.open(VID, PID)?;
     let nzxt_device = NZXTDevice::new(&hid_device, &mut handle, 270)?;
 
-    let firmware = nzxt_device.get_firmware_version()?;
-    println!("Firmware version: {}", firmware);
-
-    let status = nzxt_device.get_status()?;
-    println!("Status: {:?}", status);
-
     nzxt_device.set_fan_duty(80)?;
     nzxt_device.set_pump_duty(80)?;
 
-    let image = Path::new("/home/jordyn/Downloads/duck.jpg");
+    let image = Path::new("/home/jordyn/Downloads/elmo.gif");
     nzxt_device.set_image(image, 1, true)?;
-
-    handle.release_interface(0)?;
 
     Ok(())
 }

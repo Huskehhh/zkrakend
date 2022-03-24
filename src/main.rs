@@ -17,7 +17,7 @@ fn main() -> Result<()> {
     nzxt_device.set_fan_duty(80)?;
     nzxt_device.set_pump_duty(80)?;
 
-    let image = Path::new("/home/jordyn/Downloads/elmo.gif");
+    let image = Path::new("C:\\Users\\me\\Downloads\\elmo.gif");
     nzxt_device.set_image(image, 1, true)?;
 
     Ok(())

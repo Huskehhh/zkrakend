@@ -1,5 +1,3 @@
-use std::path::Path;
-
 use color_eyre::Result;
 use rusb::open_device_with_vid_pid;
 use zkraken_lib::{NZXTDevice, PID, VID};
@@ -16,9 +14,6 @@ fn main() -> Result<()> {
 
     nzxt_device.set_fan_duty(80)?;
     nzxt_device.set_pump_duty(80)?;
-
-    let image = Path::new("C:\\Users\\me\\Downloads\\elmo.gif");
-    nzxt_device.set_image(image, 1, true)?;
 
     Ok(())
 }
